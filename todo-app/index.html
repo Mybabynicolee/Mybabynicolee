@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-wrapper">
+            <!-- Header -->
+            <header class="header">
+                <h1>✨ My Todo List</h1>
+                <p class="subtitle">Stay organized and productive</p>
+            </header>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                    >
+                    <button id="addBtn" class="add-btn">
+                        <span>➕ Add</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <span class="stat-item">
+                    Total: <span id="totalCount">0</span>
+                </span>
+                <span class="stat-item">
+                    Completed: <span id="completedCount">0</span>
+                </span>
+            </div>
+
+            <!-- Todo List -->
+            <ul id="todoList" class="todo-list">
+                <!-- Todos will be added here -->
+            </ul>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <p>🎉 No tasks yet! Add one to get started.</p>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button id="clearCompleted" class="action-btn clear-btn">
+                    🗑️ Clear Completed
+                </button>
+                <button id="clearAll" class="action-btn delete-btn">
+                    ⚠️ Clear All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
